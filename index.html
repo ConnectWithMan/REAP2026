@@ -7,21 +7,26 @@
     <title>REAP 2025 | Online Application Form 2025, Registration: Apply Now</title>
     <meta name="description"
         content="REAP Counselling 2025 Process starts from, June 2025. REAP Counselling Registration 2025 Last Date, July 2025. ELIGIBILITY CRITERIA FOR REAP 2025. For BE/ B.Tech Admissions. Apply Now!">
-      <meta name="keywords" content="reap, reap counselling, reap counselling 2025, reap official website, reap full form, reap rajasthan">
+    <meta name="keywords" content="reap, reap counselling, reap counselling 2025, reap official website, reap full form, reap rajasthan">
     <!-- Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KRHTH0CT4J"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-KRHTH0CT4J');
-</script>
-    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KRHTH0CT4J"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KRHTH0CT4J');
+    </script>
+
     <style>
+        /* Global Box Sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         :root {
             --primary-color: #960096;
             /* Purple */
@@ -62,14 +67,90 @@
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        /* Navbar */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-branding {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 2rem; /* Spacing between menu items for large screens */
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: #34495e;
+            font-weight: 500;
+            transition: color 0.3s ease-in-out;
+            padding: 0.5rem 0; /* Add some vertical padding for clickability */
+        }
+
+        .nav-link:hover {
+            color: #3498db;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none; /* Hidden by default on larger screens */
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+            z-index: 101;
+        }
+
+        .hamburger .bar {
+            width: 100%;
+            height: 3px;
+            background-color: var(--text-dark);
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hamburger animation for active state */
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(11px) rotate(45deg);
+        }
+
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-11px) rotate(-45deg);
+        }
+
+        /* Container for main content */
         .container {
             max-width: 1140px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 15px; /* Consistent horizontal padding */
         }
 
         .btn {
@@ -109,7 +190,6 @@
             padding: 80px 0 60px 0;
             position: relative;
             overflow: hidden;
-            /* For potential future pseudo-elements */
         }
 
         .hero-content {
@@ -137,7 +217,6 @@
             font-weight: 400;
             margin-bottom: 1.5rem;
             color: #e0e0e0;
-            /* Slightly less saturated yellow */
         }
 
         .hero-text h4 {
@@ -174,12 +253,15 @@
             background: var(--bg-white);
             border-radius: var(--border-radius-md);
             box-shadow: var(--shadow-md);
-            /* Use specific top/bottom margins to allow .container's auto horizontal margins for centering */
             margin-top: 45px;
             margin-bottom: 45px;
-            padding: 40px 0;
-            /* Horizontal padding handled by .container for consistent alignment */
-            box-sizing: border-box;
+            padding: 40px 0; /* Vertical padding */
+        }
+
+        /* Ensure content within sections aligns with the container */
+        .section .container {
+            padding-top: 0;
+            padding-bottom: 0;
         }
 
         .section-title {
@@ -188,7 +270,6 @@
             color: var(--primary-color);
             margin-bottom: 30px;
             text-align: center;
-            /* Center align section titles */
             position: relative;
             padding-bottom: 10px;
         }
@@ -208,14 +289,12 @@
         .section p {
             color: var(--text-medium);
             line-height: 1.7;
-            margin-left: 40px;
-            margin-right: 40px;
+            margin-bottom: 1rem;
         }
 
         .table-responsive {
             overflow-x: auto;
             margin-top: 1rem;
-            /* Added for consistent spacing above tables */
             margin-bottom: 1.5rem;
         }
 
@@ -244,11 +323,9 @@
             background: #fdf6fd;
         }
 
-        /* Lighter purple tint */
-
         ul {
-            margin: 1rem 0 2rem 1.5rem;
-            padding: 0;
+            margin: 1rem 0 2rem 0;
+            padding-left: 1.5rem;
             list-style-type: disc;
             color: var(--text-medium);
         }
@@ -283,7 +360,6 @@
         }
 
         .card.highlight-card {
-            /* For the "How to Apply" card */
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: var(--text-light);
             box-shadow: var(--shadow-lg);
@@ -301,7 +377,6 @@
 
         .card.highlight-card .btn:hover {
             background: #ffdb58;
-            /* Lighter yellow */
         }
 
         .yellow-line {
@@ -312,24 +387,22 @@
             border-radius: 2px;
         }
 
+        .subsection-title-blue,
+        .subsection-title-purple {
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            padding-left: 0;
+        }
         .subsection-title-blue {
             color: var(--secondary-color);
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
         }
-
-        /* Consistent font size */
         .subsection-title-purple {
             color: var(--primary-color);
-            font-weight: 600;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
         }
 
-        /* Consistent font size */
+
         .important-notice {
             font-size: 1.3rem;
             color: var(--danger-color);
@@ -354,8 +427,6 @@
 
         /* Responsive Adjustments */
         @media (max-width: 991px) {
-
-            /* Tablets and larger phones */
             .hero-content {
                 flex-direction: column;
             }
@@ -382,15 +453,50 @@
                 padding: 30px 0;
             }
 
-            /* Horizontal padding from .container */
             .section-title {
                 font-size: 1.8rem;
             }
         }
 
         @media (max-width: 767px) {
+            .navbar {
+                padding: 1rem 15px;
+            }
 
-            /* Smaller tablets and mobile */
+            .nav-menu {
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                background-color: var(--bg-white);
+                padding: 4rem 1.5rem; /* Adjusted horizontal padding for mobile menu */
+                box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+                transition: right 0.3s ease-in-out;
+                z-index: 99;
+                align-items: flex-start;
+                gap: 1rem; /* Adjusted gap for vertical spacing in mobile menu */
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .nav-item {
+                width: 100%;
+            }
+
+            .nav-link {
+                padding: 0.75rem 0; /* Increased vertical padding for better touch targets */
+                color: var(--text-dark);
+                font-size: 1.2rem;
+                display: block;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
             .hero {
                 padding: 50px 0 40px 0;
             }
@@ -409,10 +515,8 @@
 
             .section {
                 padding: 25px 0;
-                /* Horizontal padding from .container */
                 margin-top: 30px;
                 margin-bottom: 30px;
-                /* Centering fix + vertical margin */
             }
 
             .section-title {
@@ -444,8 +548,6 @@
         }
 
         @media (max-width: 575px) {
-
-            /* Small mobile */
             .hero-text h1 {
                 font-size: 2rem;
             }
@@ -472,6 +574,27 @@
 </head>
 
 <body>
+
+    <header>
+        <nav class="navbar">
+            <a href="/" class="nav-branding">REAP Counselling 2025</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/reap-schedule" class="nav-link">REAP Schedule</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="container">
@@ -485,178 +608,190 @@
                     </div>
                 </div>
                 <div class="hero-img">
-                    <img src="https://dummyimage.com/400x300/960096/fff&text=REAP+2025" alt="REAP 2025 Banner">
+                    <img src="https://placehold.co/400x300/960096/fff?text=REAP+2025" alt="REAP 2025 Banner" onerror="this.onerror=null;this.src='https://placehold.co/400x300/960096/fff?text=REAP+2025';">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- OVERVIEW SECTION -->
-    <section class="section container">
-        <div class="section-title">Overview</div>
-        <p>
-            <b>The Centre for Electronic Governance (CEG) in Rajasthan</b> organizes the <b>REAP (Rajasthan Engineering
-                Admission Process)</b>, the gateway for ambitious students to pursue <b>B.E/B.Tech and B.Arch</b>
-            courses in Rajasthan. This state-level process, supported by government-aided and private unaided technical
-            institutions, offers a fair and competitive selection based on merit—no separate entrance exam required.
-            Diploma holders in engineering and technology are also eligible. REAP 2025 features three rounds of
-            counseling, open to candidates from Rajasthan and other states.
-        </p>
+    <section class="section">
+        <div class="container">
+            <div class="section-title">Overview</div>
+            <p>
+                <b>The Centre for Electronic Governance (CEG) in Rajasthan</b> organizes the <b>REAP (Rajasthan Engineering
+                    Admission Process)</b>, the gateway for ambitious students to pursue <b>B.E/B.Tech and B.Arch</b>
+                courses in Rajasthan. This state-level process, supported by government-aided and private unaided technical
+                institutions, offers a fair and competitive selection based on merit—no separate entrance exam required.
+                Diploma holders in engineering and technology are also eligible. REAP 2025 features three rounds of
+                counseling, open to candidates from Rajasthan and other states.
+            </p>
+        </div>
     </section>
 
     <!-- HIGHLIGHTS SECTION -->
-    <section class="section container">
-        <div class="section-title">REAP 2025 Highlights</div>
-        <div class="table-responsive">
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Exam Name</th>
-                        <td>REAP 2025</td>
-                    </tr>
-                    <tr>
-                        <th>Full-Form</th>
-                        <td>Rajasthan Engineering Admission Process (REAP-2025)</td>
-                    </tr>
-                    <tr>
-                        <th>Level of Admission</th>
-                        <td>UG Level</td>
-                    </tr>
-                    <tr>
-                        <th>REAP Exam Level</th>
-                        <td>State Level</td>
-                    </tr>
-                    <tr>
-                        <th>REAP Courses Offered</th>
-                        <td>B.E./B.Tech/ B.Arch</td>
-                    </tr>
-                    <tr>
-                        <th>REAP Conducting Body</th>
-                        <td>Department of Technical Education, Rajasthan</td>
-                    </tr>
-                    <tr>
-                        <th>REAP Application Mode</th>
-                        <td>Online</td>
-                    </tr>
-                    <tr>
-                        <th>Frequency of Exam</th>
-                        <td>Once a year</td>
-                    </tr>
-                </tbody>
-            </table>
+    <section class="section">
+        <div class="container">
+            <div class="section-title">REAP 2025 Highlights</div>
+            <div class="table-responsive">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th>Exam Name</th>
+                            <td>REAP 2025</td>
+                        </tr>
+                        <tr>
+                            <th>Full-Form</th>
+                            <td>Rajasthan Engineering Admission Process (REAP-2025)</td>
+                        </tr>
+                        <tr>
+                            <th>Level of Admission</th>
+                            <td>UG Level</td>
+                        </tr>
+                        <tr>
+                            <th>REAP Exam Level</th>
+                            <td>State Level</td>
+                        </tr>
+                        <tr>
+                            <th>REAP Courses Offered</th>
+                            <td>B.E./B.Tech/ B.Arch</td>
+                        </tr>
+                        <tr>
+                            <th>REAP Conducting Body</th>
+                            <td>Department of Technical Education, Rajasthan</td>
+                        </tr>
+                        <tr>
+                            <th>REAP Application Mode</th>
+                            <td>Online</td>
+                        </tr>
+                        <tr>
+                            <th>Frequency of Exam</th>
+                            <td>Once a year</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
     <!-- SCHEDULE SECTION -->
-    <section class="section container">
-        <div class="section-title">REAP 2025 Schedule</div>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Events</th>
-                        <th>Dates</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Online Registration starts (Form fees: Rs 590/-)</td>
-                        <td>28 May 2025</td>
-                    </tr>
-                    <tr>
-                        <td>Counselling Process starts</td>
-                        <td>July 2025</td>
-                    </tr>
-                    <tr>
-                        <td>Registration Last Date</td>
-                        <td>02.07.2025</td>
-                    </tr>
-                </tbody>
-            </table>
+    <section class="section">
+        <div class="container">
+            <div class="section-title">REAP 2025 Schedule</div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Events</th>
+                            <th>Dates</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Online Registration starts (Form fees: Rs 590/-)</td>
+                            <td>28 May 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Counselling Process starts</td>
+                            <td>July 2025</td>
+                        </tr>
+                        <tr>
+                            <td>Registration Last Date</td>
+                            <td>02.07.2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 
     <!-- ELIGIBILITY SECTION -->
-    <section class="section container">
-        <div class="section-title">Eligibility Criteria for REAP 2025</div>
-        <h3 class="subsection-title-blue">For BE/ B.Tech Courses</h3>
-        <ul>
-            <li>Applicants must have completed 12th grade with Physics and Mathematics as compulsory subjects.</li>
-            <li>Minimum 45% marks in qualifying exam (40% for ST/SC/PWD/OBC/SBC of Rajasthan).</li>
-            <li>Final exam appearing candidates are also eligible.</li>
-        </ul>
-        <h3 class="subsection-title-blue">For B.Arch. Courses</h3>
-        <ul>
-            <li>Applicants must have completed or appeared in 12th grade with Mathematics as a compulsory subject.</li>
-            <li>Minimum 45% marks in qualifying exam.</li>
-            <li>Valid NATA score required for admission.</li>
-        </ul>
+    <section class="section">
+        <div class="container">
+            <div class="section-title">Eligibility Criteria for REAP 2025</div>
+            <h3 class="subsection-title-blue">For BE/ B.Tech Courses</h3>
+            <ul>
+                <li>Applicants must have completed 12th grade with Physics and Mathematics as compulsory subjects.</li>
+                <li>Minimum 45% marks in qualifying exam (40% for ST/SC/PWD/OBC/SBC of Rajasthan).</li>
+                <li>Final exam appearing candidates are also eligible.</li>
+            </ul>
+            <h3 class="subsection-title-blue">For B.Arch. Courses</h3>
+            <ul>
+                <li>Applicants must have completed or appeared in 12th grade with Mathematics as a compulsory subject.</li>
+                <li>Minimum 45% marks in qualifying exam.</li>
+                <li>Valid NATA score required for admission.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- HOW TO APPLY SECTION -->
-    <section class="section container" id="apply-section">
-        <div class="section-title">How to Apply in REAP 2025</div>
-        <div class="card highlight-card">
-            <div class="yellow-line" style="background-color: var(--text-light);"></div>
-            <h4>REAP Counselling Registration 2025 Last Date</h4>
-            <h2>July 2025</h2>
-            <a href="https://reap2025.com/" target="_blank" class="btn">Apply Now</a>
+    <section class="section" id="apply-section">
+        <div class="container">
+            <div class="section-title">How to Apply in REAP 2025</div>
+            <div class="card highlight-card">
+                <div class="yellow-line" style="background-color: var(--text-light);"></div>
+                <h4>REAP Counselling Registration 2025 Last Date</h4>
+                <h2>July 2025</h2>
+                <a href="https://reap2025.com/" target="_blank" class="btn">Apply Now</a>
+            </div>
         </div>
     </section>
 
     <!-- SEAT ALLOTMENT SECTION -->
-    <section class="section container">
-        <div class="section-title">REAP 2025 Seat Allotment Process</div>
-        <h3 class="subsection-title-purple">For BE/ B.Tech</h3>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Basis of Admissions</th>
-                        <th>Priority</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Rank obtained in JEE (Mains) 2025*</td>
-                        <td>1st</td>
-                    </tr>
-                    <tr>
-                        <td>Percentile obtained in class 12th</td>
-                        <td>2nd</td>
-                    </tr>
-                    <tr>
-                        <td>Percentile obtained in Diploma in Engineering & Technology approved by the state government.
-                        </td>
-                        <td>3rd</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <h3 class="subsection-title-purple">For B.Arch. Courses</h3>
-        <div class="table-responsive">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Basis of Admissions</th>
-                        <th>Priority</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Percentile in class 12th (50%) + Higher score NATA/JEE 2025 (50%)*</td>
-                        <td>1st</td>
-                    </tr>
-                    <tr>
-                        <td>Percentile in Diploma (50%) + Higher score NATA/JEE 2025 (50%)*</td>
-                        <td>2nd</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <h3 class="important-notice">Start REAP Counselling Now</h3>
-        <div class="cta-container">
-            <a href="https://api.whatsapp.com/send?phone=7878358707&text=Hello" target="_blank" class="btn">Get Counselling Support</a>
+    <section class="section">
+        <div class="container">
+            <div class="section-title">REAP 2025 Seat Allotment Process</div>
+            <h3 class="subsection-title-purple">For BE/ B.Tech</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Basis of Admissions</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rank obtained in JEE (Mains) 2025*</td>
+                            <td>1st</td>
+                        </tr>
+                        <tr>
+                            <td>Percentile obtained in class 12th</td>
+                            <td>2nd</td>
+                        </tr>
+                        <tr>
+                            <td>Percentile obtained in Diploma in Engineering & Technology approved by the state government.
+                            </td>
+                            <td>3rd</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="subsection-title-purple">For B.Arch. Courses</h3>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Basis of Admissions</th>
+                            <th>Priority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Percentile in class 12th (50%) + Higher score NATA/JEE 2025 (50%)*</td>
+                            <td>1st</td>
+                        </tr>
+                        <tr>
+                            <td>Percentile in Diploma (50%) + Higher score NATA/JEE 2025 (50%)*</td>
+                            <td>2nd</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h3 class="important-notice">Start REAP Counselling Now</h3>
+            <div class="cta-container">
+                <a href="https://api.whatsapp.com/send?phone=7878358707&text=Hello" target="_blank" class="btn">Get Counselling Support</a>
+            </div>
         </div>
     </section>
 
@@ -668,6 +803,24 @@
         only. This form is for student counselling purposes only and shouldn't be considered for auto registration to
         any college.
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Close menu when a nav link is clicked (for mobile)
+            document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }));
+        });
+    </script>
 </body>
 
 </html>
